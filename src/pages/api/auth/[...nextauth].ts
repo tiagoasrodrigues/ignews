@@ -10,3 +10,10 @@ export default NextAuth({
     }),
   ],
 })
+
+// FaunaDB - HTTP
+// DynamoDB - AWS
+// PostgreSQL, MongoDB
+
+// 24h (1 conexão)
+// 1000 autenticação ()
