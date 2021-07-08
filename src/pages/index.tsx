@@ -1,17 +1,17 @@
-import { GetStaticProps } from 'next'
+import { GetStaticProps } from "next";
 
-import Head from 'next/head'
+import Head from "next/head";
 
-import { SubscribeButton } from '../components/SubscribeButton'
-import { stripe } from '../services/stripe'
+import { SubscribeButton } from "../components/SubscribeButton";
+import { stripe } from "../services/stripe";
 
-import styles from './home.module.scss'
+import styles from "./home.module.scss";
 
 // Client-side
 // Server-side
 // Static Site Generation
 
-// Post do Blog 
+// Post do Blog
 
 // Conteudo (SSG)
 // Comentários (Client-side)
@@ -20,10 +20,10 @@ interface HomeProps {
   product: {
     priceId: string;
     amount: number;
-  }
+  };
 }
 
-export default function Home({product}: HomeProps) {
+export default function Home({ product }: HomeProps) {
   return (
     <>
       <Head>
@@ -32,29 +32,31 @@ export default function Home({product}: HomeProps) {
       <main className={styles.contentContainer}>
         <section className={styles.hero}>
           <span>👏 Hey, welcome</span>
-          <h1>News about the <span>React</span> world.</h1>
+          <h1>
+            News about the <span>React</span> world.
+          </h1>
           <p>
-            Get access to all the publications <br/>
+            Get access to all the publications <br />
             <span>for {product.amount} month</span>
           </p>
 
-          <SubscribeButton priceId={product.priceId}/>
+          <SubscribeButton priceId={product.priceId} />
         </section>
 
         <img src="/images/avatar.svg" alt="Girl Coding" />
       </main>
     </>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const price = await stripe.prices.retrieve('price_1JAJKGAZwRgethYPbm651luU')
+  const price = await stripe.prices.retrieve("price_1JAJKGAZwRgethYPbm651luU");
 
   const product = {
     priceId: price.id,
-    amount: new Intl.NumberFormat('en-US' , {
-      style: 'currency',
-      currency: 'USD'
+    amount: new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
     }).format(price.unit_amount / 100),
   };
 
@@ -63,5 +65,5 @@ export const getStaticProps: GetStaticProps = async () => {
       product,
     },
     revalidate: 60 * 60 * 24, // 24 horas
-  }
-}
+  };
+};
