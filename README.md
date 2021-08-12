@@ -20,7 +20,7 @@
   </a>
 
   <a href="https://github.com/khalleb/ignews/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/khalleb/ignews">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/tiago-augusto/ignews">
   </a>
 
   <img alt="License" src="https://img.shields.io/github/license/khalleb/ignews">
