@@ -15,8 +15,8 @@
     <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%237519C1">
   </a>
 
-  <a href="https://www.linkedin.com/in/khalleb/">
-    <img alt="Made by Khalleb" src="https://img.shields.io/badge/made%20by-khalleb-%237519C1">
+  <a href="https://www.linkedin.com/in/dev-tiago-augusto/">
+    <img alt="Made by Tiago Augusto" src="https://img.shields.io/badge/made%20by-khalleb-%237519C1">
   </a>
 
   <a href="https://github.com/khalleb/ignews/commits/main">
