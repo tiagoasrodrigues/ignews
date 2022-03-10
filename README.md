@@ -46,7 +46,7 @@ As seguintes tecnologias foram utilizadas no projeto:
 - [Yarn](https://yarnpkg.com/lang/en/)
 
 ## :checkered_flag: Começando ##
-
+<!--
 ```bash
 # Clone this project
 $ git clone https://github.com/tiagoasrodrigues
